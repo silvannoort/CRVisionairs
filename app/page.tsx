@@ -292,7 +292,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-8">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-6">
               <div className="rounded-2xl border border-[#e2eaf6] bg-[#f7fbff] p-6">
                 <p className="text-xs uppercase tracking-[0.2em] text-[#007A4D] mb-2">
                   Mobility Score
@@ -311,51 +311,7 @@ export default function Home() {
                 <p className="text-3xl font-semibold text-[#FF0000] mb-1">33%</p>
                 <p className="text-xs text-[#FF0000]">Stable</p>
                 <div className="mt-3 h-2 rounded-full bg-white">
-                  <div className="h-full w-[92%] rounded-full bg-[#FF0000]" />
-                </div>
-              </div>
-
-              <div className="rounded-2xl border border-[#e2eaf6] bg-[#f7fbff] p-6">
-                <p className="text-xs uppercase tracking-[0.2em] text-[#004685] mb-2">
-                  Stride Length - Front Left
-                </p>
-                <p className="text-3xl font-semibold text-[#004685] mb-1">1.42m</p>
-                <p className="text-xs text-[#004685]">Optimal range</p>
-                <div className="mt-3 h-2 rounded-full bg-white">
-                  <div className="h-full w-[85%] rounded-full bg-[#004685]" />
-                </div>
-              </div>
-
-              <div className="rounded-2xl border border-[#e2eaf6] bg-[#f7fbff] p-6">
-                <p className="text-xs uppercase tracking-[0.2em] text-[#004685] mb-2">
-                  Stride Length - Front Right
-                </p>
-                <p className="text-3xl font-semibold text-[#004685] mb-1">1.38m</p>
-                <p className="text-xs text-[#004685]">Optimal range</p>
-                <div className="mt-3 h-2 rounded-full bg-white">
-                  <div className="h-full w-[82%] rounded-full bg-[#004685]" />
-                </div>
-              </div>
-
-              <div className="rounded-2xl border border-[#e2eaf6] bg-[#f7fbff] p-6">
-                <p className="text-xs uppercase tracking-[0.2em] text-[#004685] mb-2">
-                  Stride Length - Rear Left
-                </p>
-                <p className="text-3xl font-semibold text-[#004685] mb-1">1.45m</p>
-                <p className="text-xs text-[#004685]">Optimal range</p>
-                <div className="mt-3 h-2 rounded-full bg-white">
-                  <div className="h-full w-[88%] rounded-full bg-[#004685]" />
-                </div>
-              </div>
-
-              <div className="rounded-2xl border border-[#e2eaf6] bg-[#f7fbff] p-6">
-                <p className="text-xs uppercase tracking-[0.2em] text-[#004685] mb-2">
-                  Stride Length - Rear Right
-                </p>
-                <p className="text-3xl font-semibold text-[#004685] mb-1">1.40m</p>
-                <p className="text-xs text-[#004685]">Optimal range</p>
-                <div className="mt-3 h-2 rounded-full bg-white">
-                  <div className="h-full w-[83%] rounded-full bg-[#004685]" />
+                  <div className="h-full w-[33%] rounded-full bg-[#FF0000]" />
                 </div>
               </div>
 
@@ -367,6 +323,57 @@ export default function Home() {
                 <p className="text-xs text-[#E60029]">24 cows flagged</p>
                 <div className="mt-3 h-2 rounded-full bg-white">
                   <div className="h-full w-[12%] rounded-full bg-[#E60029]" />
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border-2 border-[#004685] bg-white p-6 mb-8">
+              <p className="text-sm uppercase tracking-[0.3em] text-[#004685] mb-4 font-semibold">
+                Stride Length Analysis
+              </p>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="rounded-xl border border-[#e2eaf6] bg-[#f7fbff] p-5">
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#004685] mb-2">
+                    Front Left
+                  </p>
+                  <p className="text-3xl font-semibold text-[#004685] mb-1">95%</p>
+                  <p className="text-xs text-[#004685]">Optimal range</p>
+                  <div className="mt-3 h-2 rounded-full bg-white">
+                    <div className="h-full w-[95%] rounded-full bg-[#004685]" />
+                  </div>
+                </div>
+
+                <div className="rounded-xl border border-[#e2eaf6] bg-[#f7fbff] p-5">
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#004685] mb-2">
+                    Front Right
+                  </p>
+                  <p className="text-3xl font-semibold text-[#004685] mb-1">85%</p>
+                  <p className="text-xs text-[#004685]">Optimal range</p>
+                  <div className="mt-3 h-2 rounded-full bg-white">
+                    <div className="h-full w-[82%] rounded-full bg-[#004685]" />
+                  </div>
+                </div>
+
+                <div className="rounded-xl border border-[#e2eaf6] bg-[#f7fbff] p-5">
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#004685] mb-2">
+                    Rear Left
+                  </p>
+                  <p className="text-3xl font-semibold text-[#004685] mb-1">88%</p>
+                  <p className="text-xs text-[#004685]">Optimal range</p>
+                  <div className="mt-3 h-2 rounded-full bg-white">
+                    <div className="h-full w-[88%] rounded-full bg-[#004685]" />
+                  </div>
+                </div>
+
+                <div className="rounded-xl border border-[#e2eaf6] bg-[#f7fbff] p-5">
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#004685] mb-2">
+                    Rear Right
+                  </p>
+                  <p className="text-3xl font-semibold text-[#004685] mb-1">63%</p>
+                  <p className="text-xs text-[#004685]">Optimal range</p>
+                  <div className="mt-3 h-2 rounded-full bg-white">
+                    <div className="h-full w-[63%] rounded-full bg-[#004685]" />
+                  </div>
                 </div>
               </div>
             </div>
