@@ -73,7 +73,7 @@ export default function Home() {
       <header className="bg-[#004685] px-6 py-5 shadow-lg">
         <div className="mx-auto flex max-w-7xl items-center gap-4">
         <Image
-            src="/crv-logo.jpg"
+            src="/News_CRV-kijkt-met-vernieuwd-logo-trots-vooruit_Header__1_-removebg-preview.png"
             alt="CRV Logo"
           width={100}
             height={50}
@@ -82,7 +82,7 @@ export default function Home() {
         />
           <div className="border-l border-white/20 pl-4">
             <h1 className="text-xl font-semibold text-white sm:text-2xl">
-              AI Health & Trait Monitor
+              Trait Monitor
           </h1>
             <p className="text-xs uppercase tracking-[0.3em] text-white/70">
               CRVisionairs
@@ -278,6 +278,259 @@ export default function Home() {
               ))}
             </div>
           </section>
+
+          <section className="rounded-3xl border border-[#d0deef] bg-white p-8 shadow-sm">
+            <div className="mb-6">
+              <p className="text-sm uppercase tracking-[0.3em] text-[#5c6b85] mb-2">
+                Performance metrics
+              </p>
+              <h3 className="text-2xl font-semibold text-[#004685]">
+                Locomotion & Mobility KPIs
+              </h3>
+              <p className="text-sm text-[#5c6b85]">
+                Real-time monitoring of herd mobility and locomotion patterns
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mb-8">
+              <div className="rounded-2xl border border-[#e2eaf6] bg-[#f7fbff] p-6">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#007A4D] mb-2">
+                  Mobility Score
+                </p>
+                <p className="text-3xl font-semibold text-[#007A4D] mb-1">0.3</p>
+                <p className="text-xs text-[#007A4D]">-0.15 vs last week</p>
+                <div className="mt-3 h-2 rounded-full bg-white">
+                    <div className="h-full w-[85%] rounded-full bg-[#007A4D]" />
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-[#e2eaf6] bg-[#f7fbff] p-6">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#FF0000] mb-2">
+                  Lactation-Variation
+                </p>
+                <p className="text-3xl font-semibold text-[#FF0000] mb-1">33%</p>
+                <p className="text-xs text-[#FF0000]">Stable</p>
+                <div className="mt-3 h-2 rounded-full bg-white">
+                  <div className="h-full w-[92%] rounded-full bg-[#FF0000]" />
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-[#e2eaf6] bg-[#f7fbff] p-6">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#004685] mb-2">
+                  Stride Length - Front Left
+                </p>
+                <p className="text-3xl font-semibold text-[#004685] mb-1">1.42m</p>
+                <p className="text-xs text-[#004685]">Optimal range</p>
+                <div className="mt-3 h-2 rounded-full bg-white">
+                  <div className="h-full w-[85%] rounded-full bg-[#004685]" />
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-[#e2eaf6] bg-[#f7fbff] p-6">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#004685] mb-2">
+                  Stride Length - Front Right
+                </p>
+                <p className="text-3xl font-semibold text-[#004685] mb-1">1.38m</p>
+                <p className="text-xs text-[#004685]">Optimal range</p>
+                <div className="mt-3 h-2 rounded-full bg-white">
+                  <div className="h-full w-[82%] rounded-full bg-[#004685]" />
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-[#e2eaf6] bg-[#f7fbff] p-6">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#004685] mb-2">
+                  Stride Length - Rear Left
+                </p>
+                <p className="text-3xl font-semibold text-[#004685] mb-1">1.45m</p>
+                <p className="text-xs text-[#004685]">Optimal range</p>
+                <div className="mt-3 h-2 rounded-full bg-white">
+                  <div className="h-full w-[88%] rounded-full bg-[#004685]" />
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-[#e2eaf6] bg-[#f7fbff] p-6">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#004685] mb-2">
+                  Stride Length - Rear Right
+                </p>
+                <p className="text-3xl font-semibold text-[#004685] mb-1">1.40m</p>
+                <p className="text-xs text-[#004685]">Optimal range</p>
+                <div className="mt-3 h-2 rounded-full bg-white">
+                  <div className="h-full w-[83%] rounded-full bg-[#004685]" />
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-[#e2eaf6] bg-[#f7fbff] p-6">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#E60029] mb-2">
+                  Lameness Risk
+                </p>
+                <p className="text-3xl font-semibold text-[#E60029] mb-1">12%</p>
+                <p className="text-xs text-[#E60029]">24 cows flagged</p>
+                <div className="mt-3 h-2 rounded-full bg-white">
+                  <div className="h-full w-[12%] rounded-full bg-[#E60029]" />
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-[#d0deef] bg-[#f7fbff] p-6">
+              <div className="mb-6">
+                <p className="text-sm uppercase tracking-[0.3em] text-[#5c6b85] mb-2">
+                  Lactation performance
+                </p>
+                <h4 className="text-xl font-semibold text-[#004685]">
+                  Milk Production Decline Analysis
+                </h4>
+                <p className="text-sm text-[#5c6b85]">
+                  Daily milk yield trends over lactation period
+                </p>
+              </div>
+
+              <div className="relative h-64 w-full">
+                <svg viewBox="0 0 800 200" className="w-full h-full" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="lactationGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="#004685" stopOpacity="0.3" />
+                      <stop offset="100%" stopColor="#004685" stopOpacity="0.05" />
+                    </linearGradient>
+                  </defs>
+                  
+                  {/* Grid lines */}
+                  {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+                    <line
+                      key={`grid-${i}`}
+                      x1={0}
+                      y1={i * 20}
+                      x2={800}
+                      y2={i * 20}
+                      stroke="#e2eaf6"
+                      strokeWidth={1}
+                      strokeDasharray="4,4"
+                    />
+                  ))}
+
+                  {/* Lactation decline curve */}
+                  <path
+                    d="M 50,40 Q 150,35 250,50 T 450,80 T 650,120 T 750,160"
+                    fill="none"
+                    stroke="#004685"
+                    strokeWidth={3}
+                    strokeLinecap="round"
+                  />
+
+                  {/* Area under curve */}
+                  <path
+                    d="M 50,40 Q 150,35 250,50 T 450,80 T 650,120 T 750,160 L 750,200 L 50,200 Z"
+                    fill="url(#lactationGradient)"
+                  />
+
+                  {/* Data points */}
+                  {[
+                    { x: 50, y: 40, label: "DIM 0", value: "45L" },
+                    { x: 150, y: 35, label: "DIM 30", value: "48L" },
+                    { x: 250, y: 50, label: "DIM 60", value: "46L" },
+                    { x: 350, y: 60, label: "DIM 90", value: "42L" },
+                    { x: 450, y: 80, label: "DIM 120", value: "38L" },
+                    { x: 550, y: 100, label: "DIM 150", value: "34L" },
+                    { x: 650, y: 120, label: "DIM 180", value: "30L" },
+                    { x: 750, y: 160, label: "DIM 210", value: "24L" },
+                  ].map((point, idx) => (
+                    <g key={idx}>
+                      <circle
+                        cx={point.x}
+                        cy={point.y}
+                        r={5}
+                        fill="#004685"
+                        stroke="white"
+                        strokeWidth={2}
+                      />
+                      <text
+                        x={point.x}
+                        y={point.y - 10}
+                        textAnchor="middle"
+                        className="text-xs fill-[#5c6b85]"
+                        fontSize="10"
+                      >
+                        {point.value}
+                      </text>
+                    </g>
+                  ))}
+
+                  {/* X-axis labels */}
+                  {[
+                    { x: 50, label: "0" },
+                    { x: 200, label: "60" },
+                    { x: 350, label: "120" },
+                    { x: 500, label: "180" },
+                    { x: 650, label: "240" },
+                    { x: 750, label: "300" },
+                  ].map((point, idx) => (
+                    <text
+                      key={idx}
+                      x={point.x}
+                      y={195}
+                      textAnchor="middle"
+                      className="text-xs fill-[#5c6b85]"
+                      fontSize="11"
+                    >
+                      {point.label}
+                    </text>
+                  ))}
+
+                  {/* Y-axis labels */}
+                  <text
+                    x={20}
+                    y={40}
+                    textAnchor="end"
+                    className="text-xs fill-[#5c6b85]"
+                    fontSize="11"
+                  >
+                    50L
+                  </text>
+                  <text
+                    x={20}
+                    y={100}
+                    textAnchor="end"
+                    className="text-xs fill-[#5c6b85]"
+                    fontSize="11"
+                  >
+                    30L
+                  </text>
+                  <text
+                    x={20}
+                    y={160}
+                    textAnchor="end"
+                    className="text-xs fill-[#5c6b85]"
+                    fontSize="11"
+                  >
+                    20L
+                  </text>
+                </svg>
+              </div>
+
+              <div className="mt-6 grid gap-4 md:grid-cols-3">
+                <div className="rounded-xl border border-[#e2eaf6] px-4 py-3 bg-white">
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#5c6b85] mb-1">
+                    Peak Production
+                  </p>
+                  <p className="text-xl font-semibold text-[#004685]">48.2 L/day</p>
+                  <p className="text-xs text-[#5c6b85] mt-1">At DIM 35</p>
+                </div>
+                <div className="rounded-xl border border-[#e2eaf6] px-4 py-3 bg-white">
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#5c6b85] mb-1">
+                    Current Yield
+                  </p>
+                  <p className="text-xl font-semibold text-[#004685]">24.1 L/day</p>
+                  <p className="text-xs text-[#5c6b85] mt-1">At DIM 210</p>
+                </div>
+                <div className="rounded-xl border border-[#e2eaf6] px-4 py-3 bg-white">
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#5c6b85] mb-1">
+                    Decline Rate
+                  </p>
+                  <p className="text-xl font-semibold text-[#004685]">-0.11 L/day</p>
+                  <p className="text-xs text-[#5c6b85] mt-1">Per day average</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
 
@@ -287,7 +540,7 @@ export default function Home() {
             <div className="md:col-span-2">
               <div className="flex items-center gap-4 mb-4">
             <Image
-                  src="/crv-logo.jpg"
+                  src="/News_CRV-kijkt-met-vernieuwd-logo-trots-vooruit_Header__1_-removebg-preview.png"
                   alt="CRV Logo"
                   width={100}
                   height={50}
