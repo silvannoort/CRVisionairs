@@ -441,13 +441,13 @@ export default function Home() {
               </p>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 <div className="rounded-xl border border-[#e2eaf6] bg-[#f7fbff] p-5">
-                  <p className="text-xs uppercase tracking-[0.2em] text-[#004685] mb-2">
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#E60029] mb-2">
                     Front Left
                   </p>
                   <p className="text-3xl font-semibold text-[#004685] mb-1">95%</p>
-                  <p className="text-xs text-[#004685]">Optimal range</p>
+                  <p className="text-xs text-[#E60029]">Optimal range</p>
                   <div className="mt-3 h-2 rounded-full bg-white">
-                    <div className="h-full w-[95%] rounded-full bg-[#004685]" />
+                    <div className="h-full w-[95%] rounded-full bg-[#E60029]" />
                   </div>
                 </div>
 
@@ -455,10 +455,10 @@ export default function Home() {
                   <p className="text-xs uppercase tracking-[0.2em] text-[#004685] mb-2">
                     Front Right
                   </p>
-                  <p className="text-3xl font-semibold text-[#004685] mb-1">85%</p>
-                  <p className="text-xs text-[#004685]">Optimal range</p>
+                  <p className="text-3xl font-semibold text-[#FF8C00] mb-1">85%</p>
+                  <p className="text-xs text-[#FF8C00]">Optimal range</p>
                   <div className="mt-3 h-2 rounded-full bg-white">
-                    <div className="h-full w-[82%] rounded-full bg-[#004685]" />
+                    <div className="h-full w-[82%] rounded-full bg-[#FF8C00]" />
                   </div>
                 </div>
 
