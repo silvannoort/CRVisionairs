@@ -29,66 +29,21 @@ const initialSummaryMetrics = [
 
 
 
-interface CowData {
-  animalId: number;
-  farmersAnimalNumber: string | null;
-  animalNumberShort: string;
-  animalNumber: string;
-  name: string;
-  birthDate: string;
-  birthDate2: string;
-  herdbookCode: string;
-  breedComposition: string;
-  productionPurpose: string;
-  parity: number | null;
-  lastCalvingDate: string | null;
-  lastCalvingDate2: string | null;
-  classificationDate: string | null;
-  evaluate: boolean;
-  score: string;
-  bedrijfsnaam: string;
-  breeding_purposeAnimal: string;
-}
-
 export default function Home() {
   const [linearTraits, setLinearTraits] = useState(initialLinearTraits);
   const [summaryMetrics, setSummaryMetrics] = useState(initialSummaryMetrics);
-  const [cowData, setCowData] = useState<CowData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    // Fetch cow data from API
-    const fetchCowData = async () => {
-      try {
-        setLoading(true);
-        const response = await fetch('https://insertional-gillian-premeditatedly.ngrok-free.dev/api/v2/dairy-type/330914', {
-          headers: {
-            'ngrok-skip-browser-warning': 'true',
-            'Content-Type': 'application/json',
-          },
-        });
-        if (!response.ok) {
-          throw new Error(`Failed to fetch cow data: ${response.status}`);
-        }
-        const data = await response.json();
-        // API returns an array, get first item
-        if (Array.isArray(data) && data.length > 0) {
-          setCowData(data[0]);
-        } else if (data && !Array.isArray(data)) {
-          setCowData(data);
-        }
-        setError(null);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'Unknown error');
-        console.error('Error fetching cow data:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchCowData();
-  }, []);
+  const selectedAnimal = {
+    animalId: 892924146,
+    farmersAnimalNumber: "1397",
+    animalNumberShort: "5452",
+    animalNumber: "NL 674354526",
+    name: "Autumn",
+    birthDate2: "13-05-2021",
+    herdbookCode: "S",
+    breedComposition: "HF 8",
+    productionPurpose: "D",
+    bedrijfsnaam: "J. en J. van Woudenberg",
+  };
 
   useEffect(() => {
     // Evolve values over lifetime (simulate gradual changes)
@@ -205,110 +160,83 @@ export default function Home() {
               <div className="relative h-[500px] rounded-3xl bg-gradient-to-r from-[#e6eff8] via-[#d1e2f6] to-[#b9d4f5] p-6 overflow-hidden">
                 <div className="absolute inset-6 rounded-3xl border border-white/60 bg-white/40 backdrop-blur-sm" />
                 <div className="relative h-full w-full flex items-center justify-center">
-                  <div className="relative" style={{ width: '400px', height: '400px' }}>
-                    <Image
-                      src="/cow.png"
-                      alt="Cow"
-                      width={400}
-                      height={400}
-                      className="object-contain"
-                      style={{
-                        filter: 'drop-shadow(0 8px 12px rgba(0, 0, 0, 0.15))',
-                      }}
-                    />
+                  <div className="flex h-full w-full flex-col items-center justify-center rounded-2xl border border-dashed border-white/60 bg-white/20 text-center text-white backdrop-blur-sm">
+                    <p className="text-2xl font-semibold">Video Placeholder</p>
+                    <p className="text-sm text-white/80">Insert CRV locomotion feed here</p>
                   </div>
                 </div>
-                {cowData && (
-                  <div className="absolute top-6 left-6 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-[#004685] shadow-lg border border-[#d0deef]">
-                    <p className="text-lg font-bold">{cowData.name}</p>
-                    <p className="text-xs text-[#5c6b85]">{cowData.animalNumber}</p>
-                  </div>
-                )}
                 <div className="absolute bottom-6 left-6 rounded-full bg-white px-5 py-2 text-sm font-semibold text-[#004685] shadow-lg">
                   Gait variance · 18.4°
                 </div>
               </div>
 
               <div className="space-y-6">
-                {cowData && (
-                  <div className="rounded-2xl border border-[#d0deef] bg-white p-6">
-                    <p className="text-sm uppercase tracking-[0.2em] text-[#5c6b85] mb-4">
-                      Animal Information
-                    </p>
-                    <div className="space-y-3">
-                      <div className="flex items-center justify-between py-2 border-b border-[#e2eaf6]">
-                        <span className="text-sm text-[#5c6b85]">Name</span>
-                        <span className="text-base font-semibold text-[#004685]">{cowData.name}</span>
-                      </div>
-                      <div className="flex items-center justify-between py-2 border-b border-[#e2eaf6]">
-                        <span className="text-sm text-[#5c6b85]">Animal Number</span>
-                        <span className="text-base font-semibold text-[#004685]">{cowData.animalNumber}</span>
-                      </div>
-                      <div className="flex items-center justify-between py-2 border-b border-[#e2eaf6]">
-                        <span className="text-sm text-[#5c6b85]">Birth Date</span>
-                        <span className="text-base font-semibold text-[#004685]">{cowData.birthDate2}</span>
-                      </div>
-                      <div className="flex items-center justify-between py-2 border-b border-[#e2eaf6]">
-                        <span className="text-sm text-[#5c6b85]">Breed</span>
-                        <span className="text-base font-semibold text-[#004685]">{cowData.breedComposition}</span>
-                      </div>
-                      <div className="flex items-center justify-between py-2 border-b border-[#e2eaf6]">
-                        <span className="text-sm text-[#5c6b85]">Herdbook</span>
-                        <span className="text-base font-semibold text-[#004685]">{cowData.herdbookCode}</span>
-                      </div>
-                      {cowData.lastCalvingDate2 && (
-                        <div className="flex items-center justify-between py-2">
-                          <span className="text-sm text-[#5c6b85]">Last Calving</span>
-                          <span className="text-base font-semibold text-[#004685]">{cowData.lastCalvingDate2}</span>
-                        </div>
-                      )}
+                <div className="rounded-2xl border border-[#d0deef] bg-white p-6 shadow-sm">
+                  <p className="text-sm uppercase tracking-[0.2em] text-[#5c6b85] mb-4">
+                    Selected animal
+                  </p>
+                  <div className="space-y-3 text-sm text-[#5c6b85]">
+                    <div className="flex items-center justify-between">
+                      <span>Name</span>
+                      <span className="text-base font-semibold text-[#004685]">
+                        {selectedAnimal.name}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>Animal number</span>
+                      <span className="text-base font-semibold text-[#004685]">
+                        {selectedAnimal.animalNumber}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>Farm number</span>
+                      <span className="text-base font-semibold text-[#004685]">
+                        {selectedAnimal.farmersAnimalNumber}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>Birth date</span>
+                      <span className="text-base font-semibold text-[#004685]">
+                        {selectedAnimal.birthDate2}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>Breed</span>
+                      <span className="text-base font-semibold text-[#004685]">
+                        {selectedAnimal.breedComposition}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>Herdbook</span>
+                      <span className="text-base font-semibold text-[#004685]">
+                        {selectedAnimal.herdbookCode}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span>Farm</span>
+                      <span className="text-base font-semibold text-[#004685] text-right">
+                        {selectedAnimal.bedrijfsnaam}
+                      </span>
                     </div>
                   </div>
-                )}
-                {loading && (
-                  <div className="rounded-2xl border border-[#d0deef] bg-white p-6">
-                    <p className="text-sm text-[#5c6b85]">Loading animal data...</p>
-                  </div>
-                )}
-                {error && (
-                  <div className="rounded-2xl border border-[#f0c2ca] bg-[#fef1f3] p-6">
-                    <p className="text-sm text-[#E60029]">Error loading data: {error}</p>
-                  </div>
-                )}
-                  <div className="rounded-2xl border border-[#d0deef] bg-[#f7fbff] p-6">
-                      <p className="text-sm uppercase tracking-[0.2em] text-[#5c6b85] mb-4">
-                          Anomaly focus
-                      </p>
-                      <div className="flex items-baseline gap-3 mb-4">
-                          <p className="text-5xl font-semibold text-[#E60029]">2</p>
-                          <span className="text-base text-[#5c6b85]">
+                </div>
+
+                <div className="rounded-2xl border border-[#d0deef] bg-[#f7fbff] p-6">
+                  <p className="text-sm uppercase tracking-[0.2em] text-[#5c6b85] mb-4">
+                    Anomaly focus
+                  </p>
+                  <div className="flex items-baseline gap-3 mb-4">
+                    <p className="text-5xl font-semibold text-[#E60029]">2</p>
+                    <span className="text-base text-[#5c6b85]">
                       cows with acute stride irregularities
                     </span>
-                      </div>
+                  </div>
                   <div className="mt-6 flex items-center justify-between text-sm text-[#5c6b85] mb-2">
                     <span>Stride stability</span>
                     <span className="font-semibold text-[#004685]">74%</span>
                   </div>
                   <div className="h-3 rounded-full bg-white">
                     <div className="h-full w-[74%] rounded-full bg-[#004685]" />
-                  </div>
-                </div>
-                <div className="rounded-2xl border border-[#d0deef] bg-white p-6">
-                  <p className="text-base font-semibold text-[#004685] mb-2">
-                    Intervention window
-                  </p>
-                  <p className="text-sm text-[#5c6b85] mb-4">
-                    Optimal treatment within <span className="font-semibold">6h 30m</span>
-                  </p>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-center justify-between py-2 border-b border-[#e2eaf6]">
-                      <span className="text-[#5c6b85]">Thermal imaging</span>
-                      <span className="font-semibold text-[#004685]">Ready</span>
-                    </div>
-                    <div className="flex items-center justify-between py-2">
-                      <span className="text-[#5c6b85]">Vet dispatch</span>
-                      <span className="font-semibold text-[#E60029]">Pending</span>
-                    </div>
                   </div>
                 </div>
                 <div className="rounded-2xl border border-[#d0deef] bg-white p-6">
@@ -444,7 +372,7 @@ export default function Home() {
                   <p className="text-xs uppercase tracking-[0.2em] text-[#E60029] mb-2">
                     Front Left
                   </p>
-                  <p className="text-3xl font-semibold text-[#004685] mb-1">95%</p>
+                  <p className="text-3xl font-semibold text-[#E60029] mb-1">95%</p>
                   <p className="text-xs text-[#E60029]">Optimal range</p>
                   <div className="mt-3 h-2 rounded-full bg-white">
                     <div className="h-full w-[95%] rounded-full bg-[#E60029]" />
@@ -748,4 +676,5 @@ export default function Home() {
     </div>
   );
 }
+
 
