@@ -160,10 +160,17 @@ export default function Home() {
               <div className="relative h-[500px] rounded-3xl bg-gradient-to-r from-[#e6eff8] via-[#d1e2f6] to-[#b9d4f5] p-6 overflow-hidden">
                 <div className="absolute inset-6 rounded-3xl border border-white/60 bg-white/40 backdrop-blur-sm" />
                 <div className="relative h-full w-full flex items-center justify-center">
-                  <div className="flex h-full w-full flex-col items-center justify-center rounded-2xl border border-dashed border-white/60 bg-white/20 text-center text-white backdrop-blur-sm">
-                    <p className="text-2xl font-semibold">Video Placeholder</p>
-                    <p className="text-sm text-white/80">Insert CRV locomotion feed here</p>
-                  </div>
+                  <video
+                    className="h-full w-full rounded-2xl border border-white/40 object-cover shadow-lg"
+                    src="/ezgif-5cabfa1d6e9fb363.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls
+                  >
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
                 <div className="absolute bottom-6 left-6 rounded-full bg-white px-5 py-2 text-sm font-semibold text-[#004685] shadow-lg">
                   Gait variance · 18.4°
